@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" th:replace="base :: layout(~{::div.main})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="main container">
+      <div class="row mt-5">
+          <div class="col-md-2">
+              <div class="d-grid gap-3">
+                  <a href="#" class="btn btn-outline-info"><i class="bi bi-house-fill"></i> Home</a>
+                  <a href="#" class="btn btn-outline-info"><i class="bi bi-person-lines-fill"></i> View Contacts</a>
+                  <a href="#" class="btn btn-outline-info"><i class="bi bi-person-plus-fill"></i> Add Contacts</a>
+                  <a href="#" class="btn btn-outline-info"><i class="bi bi-person-circle"></i> Profile</a>
+                  <a href="#" class="btn btn-outline-info"><i class="bi bi-gear-fill"></i> Settings</a>
+              </div>
+          </div>
+          <div class="col-md-10">
+              <h4>Hi, <span sec:authentication="principal.username"></span></h4>
+              <h2 class="display-4">My Dashboard</h2>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
